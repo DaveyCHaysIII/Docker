@@ -1,3 +1,5 @@
+#Raylib Development Docker File
+
 Install instructions:
 
 1. Replace email/name with yours in the Dockerfile
@@ -7,6 +9,7 @@ Install instructions:
 5. in the projects folder, make a file, `main.cpp`
 6. copy/paste the following template
 
+```
 #include <raylib.h>
 
 int main() {
@@ -30,7 +33,8 @@ int main() {
     CloseWindow();
     return 0;
 }
-                                                        
+```
+                                                     
 7. save it
 8. From here, run the command `g++ main.cpp -o my_program -L/usr/local/lib/libraylib.a -lraylib -lGL -lGLU  -lm -lpthread -ldl -lrt -lX11`. I plan on either including all these in a makefile or making a g++ alias, this is ridiculous. 
 9. if you get an error like this:
